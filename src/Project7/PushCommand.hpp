@@ -31,6 +31,8 @@ public:
 		ostringstream result{};
 
 		//convert command into equivalent assembly
+		//Goal for each CASE is to put what you want into D so that at the end of the 
+		//switch, D will get pushed onto the top of the stack.
 		switch (segment)
 		{
 		case Segment::Local:
@@ -48,7 +50,7 @@ public:
 		case Segment::Constant:
 
 			//load the constant 
-			result << "@" << arg1 << endl;
+			result << "@" << arg1 << "\t\t//PUSH CONSTANT" << endl;
 			result << "D=A" << endl;
 			break;
 		case Segment::Pointer:
@@ -77,8 +79,7 @@ public:
 
 		//increment stack pointer
 		result << "@SP" << endl;
-		result << "D=M+1" << endl;
-		result << "M=D" << endl;
+		result << "M=M+1" << endl;
 		
 		return result.str();
 	}

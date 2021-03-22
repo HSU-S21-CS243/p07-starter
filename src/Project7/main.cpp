@@ -17,8 +17,8 @@ int main(int argc, char* argv[])
 {
 #ifdef _DEBUG
 	//makes debugging easier by allowing you to directly load in files w/o using command line
-	Preprocessor prep{ "OrTest.vm" };
-	ofstream output_file{ "OrTest.asm" };
+	Preprocessor prep{ "SimpleAdd.vm" };
+	ofstream output_file{ "SimpleAdd.asm" };
 #else
 	Preprocessor prep{};
 	ofstream output_file{};

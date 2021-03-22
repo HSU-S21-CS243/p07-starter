@@ -1,20 +1,18 @@
-@7
+@7		//PUSH CONSTANT
 D=A
 @SP
 A=M
 M=D
 @SP
-D=M+1
-M=D
-@8
+M=M+1
+@8		//PUSH CONSTANT
 D=A
 @SP
 A=M
 M=D
 @SP
-D=M+1
-M=D
-@SP
+M=M+1
+@SP			//begin ADD command
 M=M-1
 A=M
 D=M
@@ -26,4 +24,4 @@ D=D+M
 A=M
 M=D
 @SP
-M=M+1
+M=M+1		//end ADD command
