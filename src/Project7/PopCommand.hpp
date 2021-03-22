@@ -51,6 +51,10 @@ public:
 		case Segment::Pointer:
 			break;
 		case Segment::GP1:
+
+			//AC: In my VM, I disallow popping into GP1.  I do this to ensure that
+			//it doesn't accidentally get overwritten.  This was a completely 
+			//arbitrary decision by me and may not be of importance at all to you.
 			throw "Cannot pop into GP1";
 			break;
 		case Segment::GP2:
