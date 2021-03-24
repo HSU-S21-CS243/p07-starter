@@ -146,10 +146,15 @@
   <ItemGroup>
     <ClInclude Include="AddCommand.hpp" />
     <ClInclude Include="AndCommand.hpp" />
+    <ClInclude Include="CallCommand.hpp" />
     <ClInclude Include="Command.hpp" />
     <ClInclude Include="CommandFactory.hpp" />
     <ClInclude Include="EqualCommand.hpp" />
+    <ClInclude Include="FunctionCommand.hpp" />
+    <ClInclude Include="GotoCommand.hpp" />
     <ClInclude Include="GreaterThanCommand.hpp" />
+    <ClInclude Include="IfCommand.hpp" />
+    <ClInclude Include="LabelCommand.hpp" />
     <ClInclude Include="LessThanCommand.hpp" />
     <ClInclude Include="NegateCommand.hpp" />
     <ClInclude Include="NotCommand.hpp" />
@@ -157,6 +162,7 @@
     <ClInclude Include="PopCommand.hpp" />
     <ClInclude Include="Preprocessor.hpp" />
     <ClInclude Include="PushCommand.hpp" />
+    <ClInclude Include="ReturnCommand.hpp" />
     <ClInclude Include="StringSplitter.hpp" />
     <ClInclude Include="SubtractCommand.hpp" />
   </ItemGroup>

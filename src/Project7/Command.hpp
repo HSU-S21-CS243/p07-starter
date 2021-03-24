@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-enum class CommandType { Push, Pop, Add, And, Equal, GreaterThan, LessThan, Negate, Not, Or, Subtract };
+enum class CommandType { Push, Pop, Add, And, Equal, GreaterThan, LessThan, Negate, Not, Or, Subtract, Label, Goto, If, Function, Return, Call };
 enum class Segment { None = -1, Stack, Local, Argument, This, That, Temp, Static, Constant, Pointer, GP1 = 13, GP2, GP3 };
 
 ostream& operator<<(ostream& os, const Segment& seg)
@@ -22,6 +22,9 @@ int operator+(const Segment& seg, int num)
 class Command
 {
 private:
+
+protected:
+	string _file_name;
 
 public:
 	CommandType type;
@@ -80,6 +83,16 @@ public:
 		{
 			this->segment = Segment::GP3;
 		}
+	}
+
+	void setFileName(const string& name)
+	{
+		_file_name = name;
+	}
+
+	string getFileName()
+	{
+		return _file_name;
 	}
 
 	virtual string ToAsm() = 0;
